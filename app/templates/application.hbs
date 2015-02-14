@@ -1,3 +1,30 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{#paper-nav-container classNames="ember-app"}}
 
-{{outlet}}
+  {{#paper-sidenav classNames="md-sidenav-left md-whiteframe-z2"}}
+
+    {{#paper-toolbar}}
+      <div class="md-toolbar-tools">
+        <div class="logo">
+          <strong>Bryan Hunt</strong>
+        </div>
+      </div>
+    {{/paper-toolbar}}
+
+    {{#paper-sidenav-toggle}}
+      TOGGLE SIDENAV
+    {{/paper-sidenav-toggle}}
+
+    {{#paper-content}}
+      <nav class="sidenav">
+        <ul>
+        <li>{{#link-to "split"}}Split View{{/link-to}}</li>
+        </ul>
+      </nav>
+    {{/paper-content}}
+  {{/paper-sidenav}}
+
+  {{#paper-content flex-layout="column" flex=true}}
+    {{outlet}}
+  {{/paper-content}}
+
+{{/paper-nav-container}}
