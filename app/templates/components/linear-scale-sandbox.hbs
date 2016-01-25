@@ -1,0 +1,38 @@
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Domain</h3>
+    {{paper-input label="Domain Min" value=domainMin}}
+    {{paper-input label="Domain Max" value=domainMax}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Range</h3>
+    {{paper-input label="Range Min" value=rangeMin}}
+    {{paper-input label="Range Max" value=rangeMax}}
+    {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Options</h3>
+    {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Try it</h3>
+    {{paper-input label="Input Value" value=input}}
+    Scaled output: {{scaledValue}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<br>
+<h3>Template</h3>
+<pre>
+  LinearScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
+</pre>

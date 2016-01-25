@@ -1,3 +1,5 @@
+@import 'ember-paper';
+
 *, *:before, *:after {
 box-sizing: border-box;
 }
@@ -20,6 +22,10 @@ md-sidenav {
 md-toolbar {
   height: 40px;
   min-height: 40px;
+}
+
+.toolbar-button {
+  padding-left: 10px;
 }
 
 .ember-app{

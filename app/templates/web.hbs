@@ -1,3 +1,18 @@
-<div class="center" >
-  <img src="assets/images/ApplicationStack.png" alt="Application stack diagram"/>
-</div>
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#link-to 'd3'}}Ember D3 Components{{/link-to}}
+    {{#link-to 'd3.scales' class="toolbar-button"}} Scales {{/link-to}}
+  </div>
+{{/paper-toolbar}}
+
+{{#paper-content classNames="md-padding"}}
+  <p>
+    The <a href="https://github.com/BryanHunt/web-in-a-box">web-in-a-box</a>
+    project is a fully functional web application using a MongoDB / Java / EmberJS stack.
+    It supports registering users, login, and basic admin functionality.
+  </p>
+  <h3>Architecture</h3>
+  <div>
+    <img src="assets/images/ApplicationStack.png" alt="Application stack diagram"/>
+  </div>
+{{/paper-content}}

@@ -1,7 +1,5 @@
 {{#paper-nav-container classNames="ember-app"}}
-
   {{#paper-sidenav classNames="md-sidenav-left md-whiteframe-z2"}}
-
     {{#paper-toolbar}}
       <div class="md-toolbar-tools">
         <div class="logo">
@@ -10,22 +8,16 @@
       </div>
     {{/paper-toolbar}}
 
-    {{#paper-sidenav-toggle}}
-      TOGGLE SIDENAV
-    {{/paper-sidenav-toggle}}
-
     {{#paper-content}}
-      <nav class="sidenav">
-        <ul>
-          <li>{{#link-to "split"}}Ember Split View{{/link-to}}</li>
-          <li>{{#link-to "web"}}Web In A Box{{/link-to}}</li>
-        </ul>
-      </nav>
+      {{#paper-list}}
+        {{#paper-item action="transitionTo" param="split"}}Ember Split View{{/paper-item}}
+        {{#paper-item action="transitionTo" param="d3"}}Ember D3 Components{{/paper-item}}
+        {{#paper-item action="transitionTo" param="web"}}Web In A Box{{/paper-item}}
+      {{/paper-list}}
     {{/paper-content}}
   {{/paper-sidenav}}
 
   {{#paper-content flex-layout="column" flex=true}}
     {{outlet}}
   {{/paper-content}}
-
 {{/paper-nav-container}}
