@@ -131,3 +131,9 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}

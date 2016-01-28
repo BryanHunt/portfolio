@@ -1,0 +1,38 @@
+{{#paper-select placeholder="Orientation" model=orientation}}
+  {{#paper-option value="bottom"}}bottom{{/paper-option}}
+  {{#paper-option value="top"}}top{{/paper-option}}
+  {{#paper-option value="left"}}left{{/paper-option}}
+  {{#paper-option value="right"}}right{{/paper-option}}
+{{/paper-select}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    Translate X: {{paper-slider flex=true min='10' max='400' value=translateX}}
+    Translate Y: {{paper-slider flex=true min='20' max='400' value=translateY}}
+{{/paper-card-content}}
+{{/paper-card}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Range</h3>
+    {{paper-input label="Range Min" value=rangeMin}}
+    {{paper-input label="Range Max" value=rangeMax}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Domain</h3>
+    {{paper-input label="Domain Min" value=domainMin}}
+    {{paper-input label="Domain Max" value=domainMax}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<svg class="axis" width=1000 height=1000>
+  <defs>
+    <clippath id="clip-body">
+      <rect x=-5 y=0 width=1000 height=1000></rect>
+    </clippath>
+  </defs>
+  {{d3-axis class="x-axis" orientation=orientation scale=scale transform=axisTransform grid=grid}}
+</svg>

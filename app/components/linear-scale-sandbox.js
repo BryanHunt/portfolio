@@ -19,7 +19,7 @@ export default Component.extend({
   }),
 
   domainChanged: on('init', observer('domainMin', 'domainMax', function() {
-    this.set('scale.domain', [this.get('domainMin'), this.get('domainMax')])
+    this.set('scale.domain', [this.get('domainMin'), this.get('domainMax')]);
   })),
 
   rangeChanged: on('init', observer('rangeMin', 'rangeMax', 'rangeRound', function() {

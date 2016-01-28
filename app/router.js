@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('scales', function() {
       this.route('linear');
     });
+    this.route('axis');
   });
 });
 
