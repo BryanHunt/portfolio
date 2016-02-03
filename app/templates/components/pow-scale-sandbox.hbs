@@ -4,8 +4,7 @@
 {{#paper-card}}
   {{#paper-card-content}}
     <h3>Options</h3>
-    {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
-    {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
+    {{paper-input value=scale.exponent label="Exponent"}}
   {{/paper-card-content}}
 {{/paper-card}}
 
@@ -13,5 +12,5 @@
 
 <h3>Code</h3>
 <pre>
-  LinearScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
+  PowScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}], exponent: {{scale.exponent}}{{#if scale.clamp}}, clamp: true{{/if}} });
 </pre>

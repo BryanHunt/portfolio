@@ -11,6 +11,10 @@ Router.map(function() {
   this.route('d3', function() {
     this.route('scales', function() {
       this.route('linear');
+      this.route('ordinal');
+      this.route('log');
+      this.route('pow');
+      this.route('sqrt');
     });
     this.route('axis');
   });

@@ -1,0 +1,16 @@
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Domain</h3>
+    {{#paper-list}}
+      {{#each domainItems as |item|}}
+        {{#paper-item class="md-3-line"}}
+          <div class="md-list-item-text">
+            <h4>{{item}}</h4>
+          </div>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+
+    {{paper-input label="Item" value=item}}
+  {{/paper-card-content}}
+{{/paper-card}}
