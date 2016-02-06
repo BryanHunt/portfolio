@@ -1,15 +1,2 @@
-{{domain-range-input domainMin=domainMin domainMax=domainMax}}
-{{range-input rangeMin= rangeMin rangeMax=rangeMax}}
-
-{{#paper-card}}
-  {{#paper-card-content}}
-    <h3>Options</h3>
-  {{/paper-card-content}}
-{{/paper-card}}
-
-{{scale-input input=input scaledValue=scaledValue}}
-
-<h3>Code</h3>
-<pre>
-  SqrtScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
-</pre>
+{{sqrt-scale}}
+{{scale-input input=input output=output}}

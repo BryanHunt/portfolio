@@ -1,0 +1,15 @@
+{{domain-list-input domainItems=domainItems}}
+{{range-input rangeMin= rangeMin rangeMax=rangeMax}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Options</h3>
+    {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
+    {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<h3>Code</h3>
+<pre>
+  OrdinalScale.create({ domain: [{{#each domainItems as |item index|}}{{item}}{{#unless (last-item domainItems index)}}, {{/unless}}{{/each}}], rangePoints: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
+</pre>

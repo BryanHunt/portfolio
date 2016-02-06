@@ -1,0 +1,15 @@
+{{domain-range-input domainMin=domainMin domainMax=domainMax}}
+{{range-input rangeMin=rangeMin rangeMax=rangeMax}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Scale Options</h3>
+    {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
+    {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<h3>Code</h3>
+<pre>
+  LinearScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
+</pre>

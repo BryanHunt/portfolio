@@ -1,0 +1,14 @@
+{{domain-range-input domainMin=domainMin domainMax=domainMax}}
+{{range-input rangeMin=rangeMin rangeMax=rangeMax}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Options</h3>
+    {{paper-input value=scale.exponent label="Exponent"}}
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<h3>Code</h3>
+<pre>
+  PowScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}], exponent: {{scale.exponent}}{{#if scale.clamp}}, clamp: true{{/if}} });
+</pre>
