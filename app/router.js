@@ -17,6 +17,7 @@ Router.map(function() {
       this.route('sqrt');
     });
     this.route('axis');
+    this.route('grid');
   });
 });
 

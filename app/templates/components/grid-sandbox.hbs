@@ -17,17 +17,10 @@
       {{#paper-option value="left"}}left{{/paper-option}}
       {{#paper-option value="right"}}right{{/paper-option}}
     {{/paper-select}}
-
-    Translate X: {{paper-slider flex=true min='10' max='400' value=translateX}}
-    Translate Y: {{paper-slider flex=true min='20' max='400' value=translateY}}
-{{/paper-card-content}}
+    {{paper-input value=width label="Width"}}
+    {{paper-input value=height label="Height"}}
+  {{/paper-card-content}}
 {{/paper-card}}
-
-<br>
-<h3>Template</h3>
-<pre>
-  \{{d3-axis class="axis" orientation="{{orientation}}" scale=scale transform="translate({{translateX}}, {{translateY}})"}}
-</pre>
 
 {{#paper-card}}
   {{#paper-card-content}}
@@ -38,7 +31,7 @@
           <rect x=-5 y=0 width=1000 height=1000></rect>
         </clippath>
       </defs>
-      {{d3-axis class="x-axis" orientation=orientation scale=scale transform=axisTransform grid=grid}}
+      {{d3-grid class="grid" orientation=orientation scale=scale width=width height=height translateX=translateX yOffset=yOffset}}
     </svg>
   {{/paper-card-content}}
 {{/paper-card}}

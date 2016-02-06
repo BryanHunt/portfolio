@@ -1,15 +1,28 @@
 import Ember from 'ember';
-import LinearScale from '../utils/scales/d3-linear-scale';
 
-const { Component, on, computed, observer } = Ember;
+const { Component, computed } = Ember;
 
 export default Component.extend({
-  init() {
-    this._super.apply(this, arguments);
-    this.set('translateX', 25);
-    this.set('translateY', 20);
-    this.set('orientation', "bottom");
-    this.set('grid', Ember.Object.create({x1: 0, y1: 0, x2: 0, y2: -450}));
+  scaleName: "linear-scale",
+  translateX: 25,
+  translateY: 25,
+  orientation: "bottom",
+
+  scaleDisplayName(value) {
+    switch(value) {
+      case "linear-scale":
+        return "Linear";
+      case "log-scale":
+        return "Log";
+      case "ordinal-scale":
+        return "Ordinal";
+      case "pow-scale":
+        return "Pow";
+      case "sqrt-scale":
+        return "Sqrt";
+      default:
+        return "None";
+    }
   },
 
   axisTransform: computed('translateX', 'translateY', function() {
