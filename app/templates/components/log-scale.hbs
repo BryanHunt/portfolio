@@ -9,8 +9,6 @@
   {{/paper-card-content}}
 {{/paper-card}}
 
-{{scale-input input=input scaledValue=scaledValue}}
-
 <h3>Code</h3>
 <pre>
   LogScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
