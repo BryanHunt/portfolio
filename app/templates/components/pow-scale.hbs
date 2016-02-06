@@ -1,12 +1,14 @@
-{{domain-range-input domainMin=domainMin domainMax=domainMax}}
-{{range-input rangeMin=rangeMin rangeMax=rangeMax}}
+<div layout="row" layout-sm="column">
+  {{domain-range-input domainMin=domainMin domainMax=domainMax}}
+  {{range-input rangeMin=rangeMin rangeMax=rangeMax}}
 
-{{#paper-card}}
-  {{#paper-card-content}}
-    <h3>Options</h3>
-    {{paper-input value=scale.exponent label="Exponent"}}
-  {{/paper-card-content}}
-{{/paper-card}}
+  {{#paper-card}}
+    {{#paper-card-content}}
+      <h3>Options</h3>
+      {{paper-input value=scale.exponent label="Exponent"}}
+    {{/paper-card-content}}
+  {{/paper-card}}
+</div>
 
 <h3>Code</h3>
 <pre>

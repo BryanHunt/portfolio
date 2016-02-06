@@ -1,13 +1,15 @@
-{{domain-range-input domainMin=domainMin domainMax=domainMax}}
-{{range-input rangeMin=rangeMin rangeMax=rangeMax}}
+<div layout="row" layout-sm="column">
+  {{domain-range-input domainMin=domainMin domainMax=domainMax}}
+  {{range-input rangeMin=rangeMin rangeMax=rangeMax}}
 
-{{#paper-card}}
-  {{#paper-card-content}}
-    <h3>Scale Options</h3>
-    {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
-    {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
-  {{/paper-card-content}}
-{{/paper-card}}
+  {{#paper-card}}
+    {{#paper-card-content}}
+      <h3>Scale Options</h3>
+      {{#paper-checkbox checked=rangeRound}}RangeRound{{/paper-checkbox}}
+      {{#paper-checkbox checked=scale.clamp}}Clamp{{/paper-checkbox}}
+    {{/paper-card-content}}
+  {{/paper-card}}
+</div>
 
 <h3>Code</h3>
 <pre>
