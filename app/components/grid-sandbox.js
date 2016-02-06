@@ -5,25 +5,35 @@ const { Component, computed } = Ember;
 export default Component.extend({
   scaleName: 'linear-scale',
   orientation: 'bottom',
-  width: 500,
-  height: 500,
-  xPadding: 25,
-  yPadding: 25,
 
-  translateX: computed('xPadding', 'width', 'orientation', function() {
-    if(this.get('orientation') === "right") {
-        return this.get('width') + this.get('xPadding');
+  translateX: computed('orientation', function() {
+    let orientation = this.get('orientation');
+
+    switch(orientation) {
+      case "bottom":
+      case "top":
+      case "left":
+        return 25
+      case "right":
+        return 475;
+      default:
+        return 0;
     }
-
-    return this.get('xPadding');
   }),
 
-  yOffset: computed('yPadding', 'height', function() {
-    if(this.get('orientation') === "top") {
-      return this.get('height') - this.get('yPadding');
-    }
+  translateY: computed('orientation', function() {
+    let orientation = this.get('orientation');
 
-    return this.get('yPadding');
+    switch(orientation) {
+      case "top":
+      case "left":
+      case "right":
+        return 25
+      case "bottom":
+        return 475;
+      default:
+        return 0;
+    }
   }),
 
   scaleDisplayName(value) {
