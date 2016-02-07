@@ -8,13 +8,20 @@ export default Component.extend({
   domainMax: 100,
   rangeMin: 0,
   rangeMax: 500,
+  scaleProperty: "scale",
 
   init() {
     this._super.apply(this, arguments);
     this.set('scale', LinearScale.create());
   },
 
-  scale: computed.alias('parentView.scale'),
+  scaleChanged: on('init', observer('scale', 'scaleProperty', function() {
+    let scaleProperty = this.get('scaleProperty');
+
+    if(scaleProperty) {
+      this.set(`parentView.${scaleProperty}`, this.get('scale'));
+    }
+  })),
 
   domainChanged: on('init', observer('domainMin', 'domainMax', function() {
     this.set('scale.domain', [this.get('domainMin'), this.get('domainMax')]);

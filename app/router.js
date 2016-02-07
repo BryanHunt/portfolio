@@ -18,6 +18,7 @@ Router.map(function() {
     });
     this.route('axis');
     this.route('grid');
+    this.route('xyplot');
   });
 });
 
