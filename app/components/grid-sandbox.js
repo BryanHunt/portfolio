@@ -6,6 +6,10 @@ export default Component.extend({
   scaleName: 'linear-scale',
   orientation: 'bottom',
 
+  gridTransform: computed('translateX', 'translateY', function() {
+    return `translate(${this.get('translateX')}, ${this.get('translateY')})`;
+  }),
+
   translateX: computed('orientation', function() {
     let orientation = this.get('orientation');
 

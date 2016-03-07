@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route("split");
   this.route("web");
-  this.route('d3', function() {
+  this.route('d3components', function() {
     this.route('scales', function() {
       this.route('linear');
       this.route('ordinal');
@@ -18,7 +18,9 @@ Router.map(function() {
     });
     this.route('axis');
     this.route('grid');
-    this.route('xyplot');
+  });
+  this.route('d3charts', function() {
+    this.route('line');
   });
 });
 

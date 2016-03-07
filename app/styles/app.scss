@@ -132,10 +132,14 @@ section {
   margin-bottom: 10px;
 }
 
-.axis path {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
 }
 
 .grid .tick line {
@@ -143,11 +147,34 @@ section {
 }
 
 .grid path {
+  fill: none;
   stroke-width: 0;
 }
 
 .line{
-    fill: none;
-    stroke: steelblue;
-    stroke-width: 2;
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2;
+}
+
+.area {
+  stroke: none;
+  fill: steelblue;
+  fill-opacity: .2;
+}
+
+.pie text{
+  fill: white;
+  font-weight: bold;
+}
+
+.circle {
+  stroke: none;
+  fill: red;
+  fill-opacity: .7;
+}
+
+.bar{
+  stroke: none;
+  fill: steelblue;
 }

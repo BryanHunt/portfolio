@@ -31,14 +31,14 @@
 
 {{#paper-card}}
   {{#paper-card-content}}
-    <h3>Try it</h3>
-    <svg class="axis" width=1000 height=1000>
+    <h3>Result</h3>
+    {{#d3-svg class="axis" width=600 height=600}}
       <defs>
         <clippath id="clip-body">
-          <rect x=-5 y=0 width=1000 height=1000></rect>
+          <rect x=-5 y=0 width=600 height=600></rect>
         </clippath>
       </defs>
       {{d3-axis class="x-axis" orientation=orientation scale=scale transform=axisTransform}}
-    </svg>
+    {{/d3-svg}}
   {{/paper-card-content}}
 {{/paper-card}}

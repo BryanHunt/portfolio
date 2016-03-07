@@ -8,7 +8,7 @@ export default Component.extend({
   domainMax: 100,
   rangeMin: 0,
   rangeMax: 500,
-  scaeProperty: 'scale',
+  scaleProperty: 'scale',
 
   init() {
     this._super.apply(this, arguments);
