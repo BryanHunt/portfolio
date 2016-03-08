@@ -21,6 +21,12 @@ Router.map(function() {
   });
   this.route('d3charts', function() {
     this.route('line');
+    this.route('bubble');
+    this.route('bar');
+    this.route('area');
+    this.route('stackedbar');
+    this.route('stackedarea');
+    this.route('pie');
   });
 });
 
