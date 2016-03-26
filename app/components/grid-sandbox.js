@@ -1,10 +1,16 @@
 import Ember from 'ember';
+import LinearScale from '../utils/scales/d3-linear-scale';
 
 const { Component, computed } = Ember;
 
 export default Component.extend({
   scaleName: 'linear-scale',
   orientation: 'bottom',
+
+  init(){
+    this._super(...arguments);
+    this.set('scale', LinearScale.create());
+  },
 
   gridTransform: computed('translateX', 'translateY', function() {
     return `translate(${this.get('translateX')}, ${this.get('translateY')})`;
