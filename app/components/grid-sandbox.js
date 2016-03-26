@@ -17,7 +17,7 @@ export default Component.extend({
       case "bottom":
       case "top":
       case "left":
-        return 25
+        return 25;
       case "right":
         return 475;
       default:
@@ -32,7 +32,7 @@ export default Component.extend({
       case "top":
       case "left":
       case "right":
-        return 25
+        return 25;
       case "bottom":
         return 475;
       default:

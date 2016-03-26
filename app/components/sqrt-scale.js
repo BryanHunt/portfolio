@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import SqrtScale from '../utils/scales/d3-sqrt-scale';
 
-const { Component, on, computed, observer } = Ember;
+const { Component, on, observer } = Ember;
 
 export default Component.extend({
   domainMin: 0,
@@ -9,7 +9,7 @@ export default Component.extend({
   rangeMin: 0,
   rangeMax: 500,
   scaleProperty: 'scale',
-  
+
   init() {
     this._super.apply(this, arguments);
     this.set('scale', SqrtScale.create());

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import LogScale from '../utils/scales/d3-log-scale';
 
-const { Component, on, computed, observer } = Ember;
+const { Component, on, observer } = Ember;
 
 export default Component.extend({
   domainMin: 1,

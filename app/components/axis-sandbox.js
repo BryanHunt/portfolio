@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import LinearScale from '../utils/scales/d3-linear-scale';
 
 const { Component, computed } = Ember;
 
@@ -8,9 +9,15 @@ export default Component.extend({
   translateY: 25,
   orientation: "bottom",
 
+  init(){
+    this._super(...arguments);
+    this.set('scale', LinearScale.create());
+  },
+
   scaleDisplayName(value) {
     switch(value) {
       case "linear-scale":
+      this.set('scale', LinearScale.create());
         return "Linear";
       case "log-scale":
         return "Log";

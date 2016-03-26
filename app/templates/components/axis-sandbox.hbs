@@ -1,12 +1,17 @@
-{{#paper-select item-label-callback=scaleDisplayName model=scaleName label="Scale"}}
-  {{#paper-option value="linear-scale"}}Linear{{/paper-option}}
-  {{#paper-option value="log-scale"}}Log{{/paper-option}}
-  {{#paper-option value="ordinal-scale"}}Ordinal{{/paper-option}}
-  {{#paper-option value="pow-scale"}}Pow{{/paper-option}}
-  {{#paper-option value="sqrt-scale"}}Sqrt{{/paper-option}}
-{{/paper-select}}
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Scale</h3>
+    {{#paper-select item-label-callback=scaleDisplayName model=scaleName}}
+      {{#paper-option value="linear-scale"}}Linear{{/paper-option}}
+      {{#paper-option value="log-scale"}}Log{{/paper-option}}
+      {{#paper-option value="ordinal-scale"}}Ordinal{{/paper-option}}
+      {{#paper-option value="pow-scale"}}Pow{{/paper-option}}
+      {{#paper-option value="sqrt-scale"}}Sqrt{{/paper-option}}
+    {{/paper-select}}
+    {{component scaleName scale=scale}}
 
-{{component scaleName}}
+  {{/paper-card-content}}
+{{/paper-card}}
 
 {{#paper-card}}
   {{#paper-card-content}}
@@ -20,7 +25,7 @@
 
     Translate X: {{paper-slider flex=true min='10' max='400' value=translateX}}
     Translate Y: {{paper-slider flex=true min='20' max='400' value=translateY}}
-{{/paper-card-content}}
+  {{/paper-card-content}}
 {{/paper-card}}
 
 <br>
@@ -33,11 +38,6 @@
   {{#paper-card-content}}
     <h3>Result</h3>
     {{#d3-svg class="axis" width=600 height=600}}
-      <defs>
-        <clippath id="clip-body">
-          <rect x=-5 y=0 width=600 height=600></rect>
-        </clippath>
-      </defs>
       {{d3-axis class="x-axis" orientation=orientation scale=scale transform=axisTransform}}
     {{/d3-svg}}
   {{/paper-card-content}}
