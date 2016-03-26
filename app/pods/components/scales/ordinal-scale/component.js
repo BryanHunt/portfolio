@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import OrdinalScale from '../utils/scales/d3-ordinal-scale';
 
 const { Component, on, computed, observer } = Ember;
 
@@ -9,11 +8,8 @@ export default Component.extend({
 
   init() {
     this._super.apply(this, arguments);
-    this.set('scale', OrdinalScale.create());
     this.set('domainItems', ['Apples', 'Oranges', 'Bananas']);
   },
-
-  scale: computed.alias('parentView.scale'),
 
   domainChanged: on('init', observer('domainItems.[]', function() {
     this.set('scale.domain', this.get('domainItems'));
