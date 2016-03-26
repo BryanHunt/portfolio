@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import LinearScale from 'ember-d3-components/utils/scales/d3-linear-scale';
-import OrdinalScale from '../utils/scales/d3-ordinal-scale';
+import OrdinalScale from 'ember-d3-components/utils/scales/d3-ordinal-scale';
 
 const { Component } = Ember;
 
