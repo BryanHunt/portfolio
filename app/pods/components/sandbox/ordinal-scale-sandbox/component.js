@@ -1,5 +1,5 @@
-import ScaleSandbox from './scale-sandbox';
-import OrdinalScale from '../utils/scales/d3-ordinal-scale';
+import ScaleSandbox from '../scale-sandbox/component';
+import OrdinalScale from 'ember-d3-components/utils/scales/d3-ordinal-scale';
 
 export default ScaleSandbox.extend({
   scale: OrdinalScale.create(),

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Component, on, computed, observer } = Ember;
+const { Component, on, observer } = Ember;
 
 export default Component.extend({
   rangeMin: 0,

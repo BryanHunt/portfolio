@@ -1,10 +1,10 @@
 import Ember from 'ember';
-import LinearScale from '../utils/scales/d3-linear-scale';
+import LinearScale from 'ember-d3-components/utils/scales/d3-linear-scale';
 
 const { Component, computed } = Ember;
 
 export default Component.extend({
-  scaleName: 'linear-scale',
+  scaleName: 'scales/linear-scale',
   orientation: 'bottom',
 
   init(){

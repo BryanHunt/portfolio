@@ -9,6 +9,7 @@ export default Component.extend({
   rangeMax: 500,
 
   domainChanged: on('init', observer('domainMin', 'domainMax', function() {
+    window.console.log("domainChanged");
     this.set('scale.domain', [this.get('domainMin'), this.get('domainMax')]);
   })),
 
