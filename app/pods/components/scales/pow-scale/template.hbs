@@ -12,5 +12,6 @@
 
 <h3>Code</h3>
 <pre>
+  #import PowScale from 'ember-d3-components/utils/scales/d3-pow-scale';
   PowScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}], exponent: {{scale.exponent}}{{#if scale.clamp}}, clamp: true{{/if}} });
 </pre>

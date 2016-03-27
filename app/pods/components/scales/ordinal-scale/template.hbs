@@ -13,5 +13,6 @@
 
 <h3>Code</h3>
 <pre>
+  #import OrdinalScale from 'ember-d3-components/utils/scales/d3-ordinal-scale';
   OrdinalScale.create({ domain: [{{#each domainItems as |item index|}}{{item}}{{#unless (last-item domainItems index)}}, {{/unless}}{{/each}}], rangePoints: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
 </pre>

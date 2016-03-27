@@ -13,5 +13,6 @@
 
 <h3>Code</h3>
 <pre>
+  #import LogScale from 'ember-d3-components/utils/scales/d3-log-scale';
   LogScale.create({ domain: [{{domainMin}}, {{domainMax}}], range: [{{rangeMin}}, {{rangeMax}}]{{#if scale.clamp}}, clamp: true{{/if}} });
 </pre>
