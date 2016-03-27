@@ -1,12 +1,17 @@
-{{#paper-select item-label-callback=scaleDisplayName model=scaleName label="Scale"}}
-  {{#paper-option value="linear-scale"}}Linear{{/paper-option}}
-  {{#paper-option value="log-scale"}}Log{{/paper-option}}
-  {{#paper-option value="ordinal-scale"}}Ordinal{{/paper-option}}
-  {{#paper-option value="pow-scale"}}Pow{{/paper-option}}
-  {{#paper-option value="sqrt-scale"}}Sqrt{{/paper-option}}
-{{/paper-select}}
+{{#paper-card}}
+  {{#paper-card-content}}
+    <h3>Scale</h3>
+    {{#paper-select item-label-callback=scaleDisplayName model=scaleName}}
+      {{#paper-option value="scales/linear-scale"}}Linear{{/paper-option}}
+      {{#paper-option value="scales/log-scale"}}Log{{/paper-option}}
+      {{#paper-option value="scales/ordinal-scale"}}Ordinal{{/paper-option}}
+      {{#paper-option value="scales/pow-scale"}}Pow{{/paper-option}}
+      {{#paper-option value="scales/sqrt-scale"}}Sqrt{{/paper-option}}
+    {{/paper-select}}
+    {{component scaleName scale=scale}}
+  {{/paper-card-content}}
+{{/paper-card}}
 
-{{component scaleName scale=scale}}
 
 {{#paper-card}}
   {{#paper-card-content}}
