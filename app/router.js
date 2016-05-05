@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('grid');
   });
   this.route('d3charts', function() {
+    this.route('builder');
     this.route('line');
     this.route('bubble');
     this.route('bar');
